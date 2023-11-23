@@ -35,7 +35,7 @@ function recalculate() {
 
     const calcTotalCost = () => duration * modelMultiply[modelName];
 
-    totalCost = calcTotalCost
+    totalCost = calcTotalCost;
 
     costLabel.innerHTML = totalCost;
     }
