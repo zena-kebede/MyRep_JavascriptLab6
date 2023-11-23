@@ -10,7 +10,8 @@ You are encouraged to use the provided naming convention for ease of review.
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-
+let modelName = "XYZ";
+let duration = 0;
 
 
 
@@ -26,6 +27,16 @@ You are encouraged to use the provided naming convention for ease of review.
 */
 
 // INSERT YOUR CODE HERE
+function recalculate() {
+    let costLabel = document.getElementById("calculated-cost");
+    let totalCost;
+
+    const modelMultiply = { "XYZ": 100, "CPRG": 213,};
+
+    const calcTotalCost = () => duration * modelMultiply[modelName];
+
+    totalCost = calcTotalCost
+    }
 
 
 
@@ -64,6 +75,7 @@ You are encouraged to use the provided naming convention for ease of review.
 */
 
 // INSERT YOUR CODE HERE
+let newDuration = Number(prompt("How many days would you like to book?"))
 
 
 
