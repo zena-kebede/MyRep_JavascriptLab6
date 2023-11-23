@@ -9,7 +9,7 @@ You are encouraged to use the provided naming convention for ease of review.
 /****************** create variables ******************/
 /* create variables to hold the values for modelName and duration */
 
-// INSERT YOUR CODE HERE
+
 let modelName = "XYZ";
 let duration = 0;
 
@@ -26,16 +26,18 @@ let duration = 0;
     - set the value of the calculated-cost element's innerHTML to this new value
 */
 
-// INSERT YOUR CODE HERE
+
 function recalculate() {
     let costLabel = document.getElementById("calculated-cost");
     let totalCost;
 
-    const modelMultiply = { "XYZ": 100, "CPRG": 213,};
+    const modelMultiply = { "XYZ": 100, "CPRG": 213 };
 
     const calcTotalCost = () => duration * modelMultiply[modelName];
 
     totalCost = calcTotalCost
+
+    costLabel.innerHTML = totalCost;
     }
 
 
@@ -55,7 +57,19 @@ function recalculate() {
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
     // modelButton.addEventListener("click", changeModel);
 
-// INSERT YOUR CODE HERE
+let modelButton = document.getElementById("model-button");
+
+let modelText = document.getElementById("model-text");
+
+function changeModel() {
+
+    modelName = modelName === "XYZ" ? "CPRG" : "XYZ";
+
+    modelText.innerHTML = modelName === "XYZ" ? "Model XYZ" : "Model CPRG";
+
+recalculate();
+}
+
 
 
 
@@ -75,7 +89,19 @@ function recalculate() {
 */
 
 // INSERT YOUR CODE HERE
-let newDuration = Number(prompt("How many days would you like to book?"))
+let newDuration = document.getElementById("change-duration-button");
+
+function changeDuration() {
+    let durationText = document.getElementById("duration-text");
+
+    let newDuration = Number(prompt("How many days would like to book?"));
+    duration = newDuration;
+    durationText.innerHTML = duration;
+
+    recalculate();
+}
+
+durationButton.addEventListener("click", changeDuration);
 
 
 
