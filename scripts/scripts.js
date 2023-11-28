@@ -102,7 +102,7 @@ function changeDuration() {
     recalculate();
 }
 
-durationButton.addEventListener("click", changeDuration);
+newDuration.addEventListener("click", changeDuration);
 
 
 
