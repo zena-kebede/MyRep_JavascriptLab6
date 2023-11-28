@@ -35,7 +35,7 @@ function recalculate() {
 
     const calcTotalCost = () => duration * modelMultiply[modelName];
 
-    totalCost = calcTotalCost;
+    totalCost = calcTotalCost();
 
     costLabel.innerHTML = totalCost;
     }
@@ -89,7 +89,7 @@ recalculate();
 */
 
 // INSERT YOUR CODE HERE
-let newDuration = document.getElementById("duration-button");
+let durationButton = document.getElementById("duration-button");
 
 function changeDuration() {
     let durationText = document.getElementById("duration-text");
@@ -102,7 +102,7 @@ function changeDuration() {
     recalculate();
 }
 
-newDuration.addEventListener("click", changeDuration);
+durationButton.addEventListener("click", changeDuration);
 
 
 
