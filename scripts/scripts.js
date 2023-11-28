@@ -89,7 +89,7 @@ recalculate();
 */
 
 // INSERT YOUR CODE HERE
-let newDuration = document.getElementById("change-duration-button");
+let newDuration = document.getElementById("duration-button");
 
 function changeDuration() {
     let durationText = document.getElementById("duration-text");
