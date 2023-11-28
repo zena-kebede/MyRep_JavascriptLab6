@@ -95,6 +95,7 @@ function changeDuration() {
     let durationText = document.getElementById("duration-text");
 
     let newDuration = Number(prompt("How many days would like to book?"));
+    
     duration = newDuration;
     durationText.innerHTML = duration;
 
