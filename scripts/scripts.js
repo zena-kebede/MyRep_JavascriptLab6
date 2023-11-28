@@ -71,7 +71,7 @@ recalculate();
 }
 
 
-
+modelButton.addEventListener("click", changeModel);
 
 
 
