@@ -76,20 +76,20 @@ modelButton.addEventListener("click", changeModel);
     - finally, attach this function to the "Change Duration" pseudo-button, so it runs whenever the button is clicked.
 */
 
-// INSERT YOUR CODE HERE
 let durationButton = document.getElementById("duration-button");
 
 function changeDuration() {
     let durationText = document.getElementById("duration-text");
+    let newDuration = prompt("How many days would like to book?");
+    if (newDuration !== null && !isNaN(newDuration)) {
+        duration = parseFloat(newDuration);
+        durationText.innerHTML = duration;
 
-    let newDuration = Number(prompt("How many days would like to book?"));
-    
-    duration = newDuration;
-    durationText.innerHTML = duration;
-
-    recalculate();
+        recalculate();
+    } else {
+        alert("Please enter a valid number for the duration in days");
+    }
 }
-
 durationButton.addEventListener("click", changeDuration);
 
 
