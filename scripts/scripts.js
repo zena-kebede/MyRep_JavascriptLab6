@@ -29,20 +29,12 @@ let duration = 0;
 
 function recalculate() {
     let costLabel = document.getElementById("calculated-cost");
-    let totalCost;
+    let totalCost = 0;
 
-    const modelMultiply = { "XYZ": 100, "CPRG": 213 };
+    totalCost = modelName === "XYZ" ? duration * 100 : modelName === "CPRG" ? duration * 213 : 0;
 
-    const calcTotalCost = () => duration * modelMultiply[modelName];
-
-    totalCost = calcTotalCost();
-
-    costLabel.innerHTML = totalCost;
+    costLabel.innerHTML = totalCost.toFixed(2);
     }
-
-
-
-
 
 
 /****************** model button logic ******************/
