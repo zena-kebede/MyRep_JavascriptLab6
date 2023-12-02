@@ -8,12 +8,12 @@ You are encouraged to use the provided naming convention for ease of review.
 
 /****************** create variables ******************/
 /* create variables to hold the values for modelName and duration */
-
+/** added the following as a recommendation by ChatGPT
+ *  document.addEventListener("DOMContentLoaded", function() { */
+document.addEventListener("DOMContentLoaded", function() {
 
 let modelName = "XYZ";
 let duration = 0;
-
-
 
 
 /****************** helper function ******************/
@@ -25,8 +25,6 @@ let duration = 0;
         if modelName is currently "CPRG", duration * 213 gives us the new total cost.
     - set the value of the calculated-cost element's innerHTML to this new value
 */
-
-
 function recalculate() {
     let costLabel = document.getElementById("calculated-cost");
     let totalCost = 0;
@@ -92,5 +90,4 @@ function changeDuration() {
 }
 durationButton.addEventListener("click", changeDuration);
 
-
-
+})
