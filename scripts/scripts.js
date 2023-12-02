@@ -50,23 +50,19 @@ function recalculate() {
     // modelButton.addEventListener("click", changeModel);
 
 let modelButton = document.getElementById("model-button");
-
 let modelText = document.getElementById("model-text");
 
 function changeModel() {
-
-    modelName = modelName === "XYZ" ? "CPRG" : "XYZ";
-
-    modelText.innerHTML = modelName === "XYZ" ? "Model XYZ" : "Model CPRG";
-
-recalculate();
+    modelName === "XYZ" ? (() => { modelName = "CPRG";
+    modelText.innerHTML = "Model CPRG";
+    }) () : modelName === "CPRG" && (() => {
+        modelName = "XYZ";
+        modelText.innerHTML = "Model XYZ";
+    }) ();
+    recalculate();
 }
 
-
 modelButton.addEventListener("click", changeModel);
-
-
-
 
 
 /****************** duration button logic ******************/
