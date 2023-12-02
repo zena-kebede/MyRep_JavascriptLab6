@@ -8,10 +8,6 @@ You are encouraged to use the provided naming convention for ease of review.
 
 /****************** create variables ******************/
 /* create variables to hold the values for modelName and duration */
-/** added the following as a recommendation by ChatGPT
- *  document.addEventListener("DOMContentLoaded", function() { */
-/*document.addEventListener("DOMContentLoaded", function() {
-
 let modelName = "XYZ";
 let duration = 0;
 
